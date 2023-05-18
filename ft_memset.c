@@ -1,18 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yushsato <yushsato@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/17 17:33:48 by yushsato          #+#    #+#             */
-/*   Updated: 2023/05/18 14:02:25 by yushsato         ###   ########.fr       */
+/*   Created: 2023/05/18 14:05:14 by yushsato          #+#    #+#             */
+/*   Updated: 2023/05/18 14:21:34 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isprint(int c)
+void	*memset(void *b, int c, size_t len)
 {
-	if ((40 <= c && c <= 77) || (101 <= c && c <= 176))
-		return (1);
-	return (0);
+	unsigned char	*s;
+
+	s = (unsigned char *)b;
+	while (len--)
+		*s++ = c;
+	return (b);
 }
