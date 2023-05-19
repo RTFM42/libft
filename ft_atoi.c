@@ -1,22 +1,13 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yushsato <yushsato@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/18 14:29:59 by yushsato          #+#    #+#             */
-/*   Updated: 2023/05/18 15:38:59 by yushsato         ###   ########.fr       */
+/*   Created: 2023/05/19 15:22:43 by yushsato          #+#    #+#             */
+/*   Updated: 2023/05/19 15:23:01 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
-{
-	const char	*s = src;
-	char		*d;
 
-	d = dst;
-	while (n--)
-		*d++ = *s++;
-	return (dst);
-}

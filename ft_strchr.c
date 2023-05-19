@@ -1,22 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yushsato <yushsato@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/18 14:29:59 by yushsato          #+#    #+#             */
-/*   Updated: 2023/05/18 15:38:59 by yushsato         ###   ########.fr       */
+/*   Created: 2023/05/18 16:05:52 by yushsato          #+#    #+#             */
+/*   Updated: 2023/05/18 16:14:15 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+char	*ft_strchr(const char *s, int c)
 {
-	const char	*s = src;
-	char		*d;
-
-	d = dst;
-	while (n--)
-		*d++ = *s++;
-	return (dst);
+	while (*s)
+		if (*s++ == c)
+			return (s);
+	if (c == '\0')
+		return (s);
+	return ((void *)0);
 }

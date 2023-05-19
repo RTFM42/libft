@@ -1,22 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yushsato <yushsato@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/18 14:29:59 by yushsato          #+#    #+#             */
-/*   Updated: 2023/05/18 15:38:59 by yushsato         ###   ########.fr       */
+/*   Created: 2023/05/18 15:40:52 by yushsato          #+#    #+#             */
+/*   Updated: 2023/05/18 15:40:52 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+unsigned int	ft_strlcpy(char *dest, const char *src, unsigned int size)
 {
-	const char	*s = src;
-	char		*d;
+	unsigned int	i;
 
-	d = dst;
-	while (n--)
-		*d++ = *s++;
-	return (dst);
+	i = 0;
+	if (size > 0)
+	{
+		while (i < size - 1)
+		{
+			*dest = src[i];
+			dest++;
+			i++;
+		}
+		*dest = '\0';
+	}
+	i = 0;
+	while (src[i] != '\0')
+		i++;
+	return (i);
 }

@@ -1,22 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yushsato <yushsato@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/18 14:29:59 by yushsato          #+#    #+#             */
-/*   Updated: 2023/05/18 15:38:59 by yushsato         ###   ########.fr       */
+/*   Created: 2023/05/18 16:16:17 by yushsato          #+#    #+#             */
+/*   Updated: 2023/05/18 16:16:18 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+int	ft_strncmp(char *s1, char *s2, unsigned int n)
 {
-	const char	*s = src;
-	char		*d;
-
-	d = dst;
+	if (n == 0)
+		return (0);
 	while (n--)
-		*d++ = *s++;
-	return (dst);
+	{
+		if (*s1 != *s2++)
+			return (*s1 - *(s2 - 1));
+		if (*s1++ == 0)
+			break ;
+	}
+	return (0);
 }

@@ -1,22 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yushsato <yushsato@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/18 14:29:59 by yushsato          #+#    #+#             */
-/*   Updated: 2023/05/18 15:38:59 by yushsato         ###   ########.fr       */
+/*   Created: 2023/05/18 16:48:05 by yushsato          #+#    #+#             */
+/*   Updated: 2023/05/19 15:23:52 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+char	*ft_strnstr(const char *s, const char *find, size_t len)
 {
-	const char	*s = src;
-	char		*d;
+	int	i;
 
-	d = dst;
-	while (n--)
-		*d++ = *s++;
-	return (dst);
+	if (*s == '\0')
+		return ((char *)s);
+	while (j < len && *s)
+	{
+		i = 0;
+		while (s[i] && find[i] && s[i] == find[i])
+			i++;
+		if (find[i] == '\0')
+			return (s);
+		s++;
+	}
+	return (0);
 }
