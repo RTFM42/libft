@@ -6,16 +6,19 @@
 /*   By: yushsato <yushsato@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 16:05:52 by yushsato          #+#    #+#             */
-/*   Updated: 2023/05/20 16:57:30 by yushsato         ###   ########.fr       */
+/*   Updated: 2023/05/20 20:49:38 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strchr(const char *s, int c)
 {
-	while (*s)
-		if (*s++ == c)
-			return ((char *)s);
-	if (c == '\0')
-		return ((char *)s);
-	return ((void *)0);
+    const char cc = c;
+
+	while (*s != cc)
+	{
+		if (*s++ == '\0')
+			return (0);
+	}
+	return ((char *)s);
+	
 }

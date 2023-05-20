@@ -6,11 +6,11 @@
 /*   By: yushsato <yushsato@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/20 17:56:12 by yushsato          #+#    #+#             */
-/*   Updated: 2023/05/20 18:01:17 by yushsato         ###   ########.fr       */
+/*   Updated: 2023/05/20 20:50:22 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*strrchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
 	char	*last;
 
