@@ -3,3 +3,4 @@
 **/*.swo
 **/*.o
 **/*.a
+/libft-tester-tokyo
