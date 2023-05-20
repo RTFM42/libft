@@ -6,9 +6,11 @@
 /*   By: yushsato <yushsato@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 16:42:50 by yushsato          #+#    #+#             */
-/*   Updated: 2023/05/19 15:24:08 by yushsato         ###   ########.fr       */
+/*   Updated: 2023/05/20 18:06:47 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {

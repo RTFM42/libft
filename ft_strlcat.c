@@ -6,21 +6,13 @@
 /*   By: yushsato <yushsato@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 15:42:26 by yushsato          #+#    #+#             */
-/*   Updated: 2023/05/18 15:43:42 by yushsato         ###   ########.fr       */
+/*   Updated: 2023/05/20 14:16:59 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int	ft_strlen(const char *str)
-{
-	unsigned int	len;
+#include "libft.h"
 
-	len = 0;
-	while (*str++)
-		len++;
-	return (len);
-}
-
-unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
+size_t	ft_strlcat(char *dest, char *src, unsigned int size)
 {
 	char			*d;
 	const char		*s = src;

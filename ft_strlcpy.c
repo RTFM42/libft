@@ -6,9 +6,11 @@
 /*   By: yushsato <yushsato@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 15:40:52 by yushsato          #+#    #+#             */
-/*   Updated: 2023/05/19 16:14:57 by yushsato         ###   ########.fr       */
+/*   Updated: 2023/05/20 16:41:00 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 size_t	ft_strlcpy(char *dest, const char *src, unsigned int size)
 {

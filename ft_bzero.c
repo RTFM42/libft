@@ -6,9 +6,11 @@
 /*   By: yushsato <yushsato@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 14:22:27 by yushsato          #+#    #+#             */
-/*   Updated: 2023/05/18 14:29:29 by yushsato         ###   ########.fr       */
+/*   Updated: 2023/05/20 16:39:17 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {

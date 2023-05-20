@@ -6,7 +6,7 @@
 /*   By: yushsato <yushsato@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 16:05:52 by yushsato          #+#    #+#             */
-/*   Updated: 2023/05/18 16:14:15 by yushsato         ###   ########.fr       */
+/*   Updated: 2023/05/20 16:57:30 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@ char	*ft_strchr(const char *s, int c)
 {
 	while (*s)
 		if (*s++ == c)
-			return (s);
+			return ((char *)s);
 	if (c == '\0')
-		return (s);
+		return ((char *)s);
 	return ((void *)0);
 }

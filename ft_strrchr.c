@@ -1,19 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yushsato <yushsato@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/17 17:25:04 by yushsato          #+#    #+#             */
-/*   Updated: 2023/05/20 16:27:55 by yushsato         ###   ########.fr       */
+/*   Created: 2023/05/20 17:56:12 by yushsato          #+#    #+#             */
+/*   Updated: 2023/05/20 18:01:17 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalnum(int c)
+char	*strrchr(const char *s, int c)
 {
-	if (('0' <= c && c <= '9') && ('a' <= c && c <= 'z')
-		&& ('A' <= c && c <= 'Z'))
-		return (c);
-	return (0);
+	char	*last;
+
+	while (*s)
+	{
+		if (*s == c)
+			last = (char *)s;
+		s++;
+	}
+	return (last);
 }

@@ -6,9 +6,11 @@
 /*   By: yushsato <yushsato@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 14:39:16 by yushsato          #+#    #+#             */
-/*   Updated: 2023/05/18 15:38:48 by yushsato         ###   ########.fr       */
+/*   Updated: 2023/05/20 16:40:23 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	*memmove(void *dst, const void *src, size_t len)
 {
