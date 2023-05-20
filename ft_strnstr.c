@@ -3,31 +3,36 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yushsato <yushsato@student.42tokyo.>       +#+  +:+       +#+        */
+/*   By: yushsato <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/18 16:48:05 by yushsato          #+#    #+#             */
-/*   Updated: 2023/05/20 18:09:43 by yushsato         ###   ########.fr       */
+/*   Created: 2023/05/21 03:59:31 by yushsato          #+#    #+#             */
+/*   Updated: 2023/05/21 04:03:56 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *s, const char *find, size_t len)
+char	*ft_strnstr(const char *s, const char *c, size_t len)
 {
-	int		i;
-	size_t	j;
+	unsigned int		i;
+	unsigned int		j;
 
-	if (*s == '\0')
+	if (c[0] == '\0')
 		return ((char *)s);
-	j = 0;
-	while (j < len && *s)
+	i = 0;
+	while (s[i] && i < len)
 	{
-		i = 0;
-		while (s[i] && find[i] && s[i] == find[i])
-			i++;
-		if (find[i] == '\0')
-			return ((char *)s);
-		s++;
+		j = 0;
+		if (s[i] == c[j])
+		{
+			while (i + j < len && s[i + j] == c[j])
+			{
+				j++;
+				if (!c[j])
+					return ((char *)&s[i]);
+			}
+		}
+		i++;
 	}
 	return (0);
 }
