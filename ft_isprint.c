@@ -6,13 +6,13 @@
 /*   By: yushsato <yushsato@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 17:33:48 by yushsato          #+#    #+#             */
-/*   Updated: 2023/05/20 20:25:07 by yushsato         ###   ########.fr       */
+/*   Updated: 2023/05/20 20:28:52 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isprint(int c)
 {
-	if (32 <= c && c <= 127)
+	if (' ' <= c && c <= '~')
 		return (1);
 	return (0);
 }
