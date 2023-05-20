@@ -6,13 +6,13 @@
 /*   By: yushsato <yushsato@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 16:56:47 by yushsato          #+#    #+#             */
-/*   Updated: 2023/05/17 17:31:59 by yushsato         ###   ########.fr       */
+/*   Updated: 2023/05/20 18:19:38 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isalpha(int c)
 {
-	if (('a' <= c && c <= 'z') && ('A' <= c && c <= 'Z'))
+	if (('a' <= c && c <= 'z') || ('A' <= c && c <= 'Z'))
 		return (c);
 	return (0);
 }

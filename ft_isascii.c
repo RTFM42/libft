@@ -6,13 +6,13 @@
 /*   By: yushsato <yushsato@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 17:32:31 by yushsato          #+#    #+#             */
-/*   Updated: 2023/05/17 17:33:32 by yushsato         ###   ########.fr       */
+/*   Updated: 2023/05/20 18:22:35 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_issacii(int c)
+int	ft_isascii(int c)
 {
-	if (0 <= c && c <= 177)
+	if (0 <= c && c <= 127)
 		return (1);
 	return (0);
 }
