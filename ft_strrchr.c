@@ -6,7 +6,7 @@
 /*   By: yushsato <yushsato@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/20 17:56:12 by yushsato          #+#    #+#             */
-/*   Updated: 2023/05/20 20:50:22 by yushsato         ###   ########.fr       */
+/*   Updated: 2023/05/20 20:56:45 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@ char	*ft_strrchr(const char *s, int c)
 {
 	char	*last;
 
+	last = (char *)0;
 	while (*s)
 	{
 		if (*s == c)
