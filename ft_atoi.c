@@ -6,7 +6,7 @@
 /*   By: yushsato <yushsato@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 15:22:43 by yushsato          #+#    #+#             */
-/*   Updated: 2023/05/28 17:24:49 by yushsato         ###   ########.fr       */
+/*   Updated: 2023/05/28 17:31:47 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,9 @@ int	ft_atoi(const char *str)
 		{
 			ret = ret * 10 + *(str - 1) - '0';
 			if (ret >= LONG_MAX)
-				return ((int)LONG_MIN);
-			if (ret <= LONG_MIN)
 				return ((int)LONG_MAX);
+			if (ret <= LONG_MIN)
+				return ((int)LONG_MIN);
 		}
 		else
 			break ;
