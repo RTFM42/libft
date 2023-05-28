@@ -1,6 +1,6 @@
-**/a.out*
-**/*.swp
-**/*.swo
-**/*.o
-**/*.a
+a.out*
+*.swp
+*.swo
+*.o
+*.a
 /libft-tester-tokyo
