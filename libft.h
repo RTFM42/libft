@@ -6,7 +6,7 @@
 /*   By: yushsato <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/20 15:54:04 by yushsato          #+#    #+#             */
-/*   Updated: 2023/05/20 20:51:34 by yushsato         ###   ########.fr       */
+/*   Updated: 2023/05/30 16:38:38 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ char	*ft_strrchr(const char *s, int c);
 size_t	ft_strlcat(char *dest, char *src, unsigned int size);
 size_t	ft_strlcpy(char *dest, const char *src, unsigned int size);
 size_t	ft_strlen(const char *s);
-int		ft_strncmp(char *s1, char *s2, unsigned int n);
+int		ft_strncmp(const char *s1, const char *s2, unsigned int n);
 char	*ft_strnstr(const char *s, const char *find, size_t len);
 int		ft_tolower(int c);
 int		ft_toupper(int c);

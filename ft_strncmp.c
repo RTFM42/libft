@@ -6,11 +6,11 @@
 /*   By: yushsato <yushsato@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 16:16:17 by yushsato          #+#    #+#             */
-/*   Updated: 2023/05/21 03:17:11 by yushsato         ###   ########.fr       */
+/*   Updated: 2023/05/30 16:37:29 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strncmp(char *s1, char *s2, unsigned int n)
+int	ft_strncmp(const char *s1,const char *s2, unsigned int n)
 {
 	int	do_;
 
