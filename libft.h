@@ -6,7 +6,7 @@
 /*   By: yushsato <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/20 15:54:04 by yushsato          #+#    #+#             */
-/*   Updated: 2023/05/31 18:02:13 by yushsato         ###   ########.fr       */
+/*   Updated: 2023/05/31 19:04:52 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,6 @@ int		ft_toupper(int c);
 void    *ft_calloc(size_t count, size_t size);
 char	*ft_strdup(const char *s1);
 char	*ft_substr(const char *s, unsigned int start, size_t len);
+char	*ft_strjoin(const char *s1, const char *s2);
 
 #endif
