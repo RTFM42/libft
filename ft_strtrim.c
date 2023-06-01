@@ -6,13 +6,12 @@
 /*   By: yushsato <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 19:16:37 by yushsato          #+#    #+#             */
-/*   Updated: 2023/05/31 23:24:23 by yushsato         ###   ########.fr       */
+/*   Updated: 2023/06/01 17:10:42 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 int	is_include(const char *s, const char find)
 {
@@ -25,26 +24,25 @@ int	is_include(const char *s, const char find)
 char	*ft_strtrim(const char *s1, const char *set)
 {
 	const char	*s2 = s1;
-	size_t		len;
 	char		*ret;
+	size_t		len;
 
-	while (*s1 && is_include(set, *s1))
-		s1++;
-	printf("%s", s1);
-	while (*s2 != '\0' && *s2 + 1 != '\0')
+	while (*s2 != '\0' && *(s2 + 1) != '\0')
 		s2++;
-	while (s1 <= s2 && is_include(set, *s2))
+	while (*s1 != '\0' && is_include(set, *s1))
+		s1++;
+	while (s2 > s1 && is_include(set, *s2))
 		s2--;
-	len = s2 - s1;
-	ret = (char *)malloc(len + 1);
-	if (!ret)
+	if (s2 > s1 || (*s2 != '\0' && *(s2 + 1) != '\0')
+		|| (*s1 != '\0' && *(s2 - 1)))
+		len = s2 - s1 + 2;
+	else
+		len = 1;
+	ret = (char *)malloc(len);
+	if (ret == 0x0)
 		return (0);
-	*(ret + len) = '\0';
-	memcpy(ret, s1, len);
+	ft_bzero(ret, len);
+	if (len - 1)
+		ft_memcpy(ret, s1, s2 - s1 + 1);
 	return (ret);
-}
-
-int	main(void)
-{
-	printf("%s", ft_strtrim("hello world", "world"));
 }
