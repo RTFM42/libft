@@ -6,7 +6,7 @@
 /*   By: yushsato <yushsato@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/04 17:08:33 by yushsato          #+#    #+#             */
-/*   Updated: 2023/06/05 05:35:49 by yushsato         ###   ########.fr       */
+/*   Updated: 2023/06/05 05:38:28 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ char	**ft_split(const char *s, char c)
 			i++;
 		if (i != 0)
 		{
-			ret[j] = ft_calloc(i + 1);
+			ret[j] = ft_calloc(sizeof(char), i + 1);
 			if (ret[j] == NULL)
 			{
 				while (--j)
