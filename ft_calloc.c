@@ -6,7 +6,7 @@
 /*   By: yushsato <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 18:51:27 by yushsato          #+#    #+#             */
-/*   Updated: 2023/05/30 19:31:33 by yushsato         ###   ########.fr       */
+/*   Updated: 2023/06/05 04:29:58 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ void	*ft_calloc(size_t count, size_t size)
 		size = 1;
 	}
 	ptr = malloc(size * count);
+	if (ptr == NULL)
+		return (NULL);
 	if (ptr)
 		ft_bzero(ptr, size * count);
 	return (ptr);
