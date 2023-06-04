@@ -6,7 +6,7 @@
 /*   By: yushsato <yushsato@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/04 17:08:33 by yushsato          #+#    #+#             */
-/*   Updated: 2023/06/05 04:45:17 by yushsato         ###   ########.fr       */
+/*   Updated: 2023/06/05 05:35:49 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,14 @@
 #include <stdio.h>
 #include "libft.h"
 
-size_t	wd_num(const char *s, char c)
+char	**ft_split(const char *s, char c)
 {
 	size_t	i;
 	size_t	j;
+	char	**ret;
 
-	j = 0;
-	while (*s == '\0')
+	j = 1;
+	while (*s != '\0')
 	{
 		i = 0;
 		while (*s == c)
@@ -31,16 +32,11 @@ size_t	wd_num(const char *s, char c)
 			j++;
 		s += i;
 	}
-	return (j);
-}
-
-int	wd_in(char **ret, const char *s, char c)
-{
-	size_t	i;
-	size_t	j;
-
+	ret = malloc(sizeof(char *) * j);
+	if (ret == NULL)
+		return (NULL);
 	j = 0;
-	while (*s == '\0')
+	while (*s != '\0')
 	{
 		i = 0;
 		while (*s == c)
@@ -49,33 +45,18 @@ int	wd_in(char **ret, const char *s, char c)
 			i++;
 		if (i != 0)
 		{
-			ret[j] = ft_calloc(sizeof(char), i + 1);
+			ret[j] = ft_calloc(i + 1);
 			if (ret[j] == NULL)
 			{
 				while (--j)
 					free(ret[j]);
-				return (0);
+				free(ret);
+				return (NULL);
 			}
-			ft_memcpy(ret[j++], s, i);
+			ft_memcpy(ret[j], s, i);
+			j++;
 		}
 		s += i;
-	}
-	return (j);
-}
-
-char	**ft_split(const char *s, char c)
-{
-	char	**ret;
-
-	if (!s)
-		return (NULL);
-	ret = malloc(sizeof(char *) * (wd_num(s, c) + 1));
-	if (ret)
-		return (NULL);
-	if (!wd_in(ret, s, c))
-	{
-		free(ret);
-		return (NULL);
 	}
 	return (ret);
 }
