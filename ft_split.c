@@ -6,7 +6,7 @@
 /*   By: yushsato <yushsato@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/04 17:08:33 by yushsato          #+#    #+#             */
-/*   Updated: 2023/06/05 04:40:08 by yushsato         ###   ########.fr       */
+/*   Updated: 2023/06/05 04:45:17 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ int	wd_in(char **ret, const char *s, char c)
 			{
 				while (--j)
 					free(ret[j]);
-				return (ret);
+				return (0);
 			}
 			ft_memcpy(ret[j++], s, i);
 		}
@@ -73,6 +73,9 @@ char	**ft_split(const char *s, char c)
 	if (ret)
 		return (NULL);
 	if (!wd_in(ret, s, c))
+	{
+		free(ret);
 		return (NULL);
+	}
 	return (ret);
 }
