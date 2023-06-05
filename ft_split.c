@@ -6,7 +6,7 @@
 /*   By: yushsato <yushsato@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/04 17:08:33 by yushsato          #+#    #+#             */
-/*   Updated: 2023/06/05 06:23:11 by yushsato         ###   ########.fr       */
+/*   Updated: 2023/06/05 19:38:11 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,9 @@
 
 char	**split_allocate(const char *s, char c)
 {
-	size_t		i;
-	size_t		j;
+	size_t	i;
+	size_t	j;
+	char	**ret;
 
 	j = 1;
 	while (*s != '\0')
@@ -31,7 +32,10 @@ char	**split_allocate(const char *s, char c)
 			j++;
 		s += i;
 	}
-	return (malloc(sizeof(char *) * j));
+	ret = malloc(sizeof(char *) * j);
+	while (j--)
+		ret[j + 1] = NULL;
+	return (ret);
 }
 
 char	**split_in(char **ret, const char *s, char c)
