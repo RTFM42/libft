@@ -6,14 +6,14 @@
 /*   By: yushsato <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/05 16:53:32 by yushsato          #+#    #+#             */
-/*   Updated: 2023/06/07 14:47:08 by yushsato         ###   ########.fr       */
+/*   Updated: 2023/06/07 15:01:24 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "stdio.h"
 #include "libft.h"
 
-char	*itoa_alloc(int n)
+char	*itoa_alloc(long n)
 {
 	char	*ret;
 	int		i;
@@ -55,25 +55,23 @@ char	*ft_itoa(int n)
 	char	*ret;
 	char	*res;
 	int		i;
-	int		f;
+	long	m;
 
-	n *= 1;
 	i = 0;
-	ret = itoa_alloc(n);
+	m = n;
+	ret = itoa_alloc(m);
 	res = ret;
 	if (ret == NULL)
 		return (NULL);
-	if (n < 0 && n != -0 && n != +0)
+	if (m < 0)
 	{
 		*ret++ = '-';
-		n *= -1;
+		m *= -1;
 	}
-	while (n || f)
+	while (m || i == 0)
 	{
-		f = 0;
-		ret[i] = n % 10 + '0';
-		n /= 10;
-		i++;
+		ret[i++] = m % 10 + '0';
+		m /= 10;
 	}
 	strrev(ret);
 	return (res);
