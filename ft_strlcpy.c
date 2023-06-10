@@ -6,7 +6,7 @@
 /*   By: yushsato <yushsato@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 15:40:52 by yushsato          #+#    #+#             */
-/*   Updated: 2023/06/10 14:22:19 by yushsato         ###   ########.fr       */
+/*   Updated: 2023/06/10 16:36:11 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ size_t	ft_strlcpy(char *dest, const char *src, unsigned int size)
 	i = 0;
 	if (size > 0)
 	{
-		while (i < size - 1 &&  src[i])
+		while (i < size - 1 && src[i])
 		{
 			*dest = src[i];
 			dest++;

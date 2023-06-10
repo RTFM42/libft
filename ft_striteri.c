@@ -6,7 +6,7 @@
 /*   By: yushsato <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/10 12:53:11 by yushsato          #+#    #+#             */
-/*   Updated: 2023/06/10 13:04:48 by yushsato         ###   ########.fr       */
+/*   Updated: 2023/06/10 16:35:44 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 
 	if (!s || !f)
 		return ;
-
 	i = 0;
 	while (s[i])
 	{
