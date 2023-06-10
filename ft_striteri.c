@@ -1,27 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yushsato <yushsato@student.42tokyo.>       +#+  +:+       +#+        */
+/*   By: yushsato <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/18 14:29:59 by yushsato          #+#    #+#             */
-/*   Updated: 2023/06/10 14:21:10 by yushsato         ###   ########.fr       */
+/*   Created: 2023/06/10 12:53:11 by yushsato          #+#    #+#             */
+/*   Updated: 2023/06/10 13:04:48 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	char	*s;
-	char	*d;
-	
-	if (!dst || !src)
-		return (NULL);
-	d = dst;
-	s = (char *)src;
-	while (n--)
-		*d++ = *s++;
-	return (dst);
+	unsigned int	i;
+
+	if (!s || !f)
+		return ;
+
+	i = 0;
+	while (s[i])
+	{
+		f(i, &s[i]);
+		i++;
+	}
 }

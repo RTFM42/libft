@@ -6,7 +6,7 @@
 /*   By: yushsato <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 19:16:37 by yushsato          #+#    #+#             */
-/*   Updated: 2023/06/01 17:10:42 by yushsato         ###   ########.fr       */
+/*   Updated: 2023/06/10 14:24:06 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ char	*ft_strtrim(const char *s1, const char *set)
 	char		*ret;
 	size_t		len;
 
+	if (!s1 || !set)
+		return (NULL);
 	while (*s2 != '\0' && *(s2 + 1) != '\0')
 		s2++;
 	while (*s1 != '\0' && is_include(set, *s1))

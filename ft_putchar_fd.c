@@ -1,27 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yushsato <yushsato@student.42tokyo.>       +#+  +:+       +#+        */
+/*   By: yushsato <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/18 14:29:59 by yushsato          #+#    #+#             */
-/*   Updated: 2023/06/10 14:21:10 by yushsato         ###   ########.fr       */
+/*   Created: 2023/06/10 13:05:24 by yushsato          #+#    #+#             */
+/*   Updated: 2023/06/10 13:09:35 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <unistd.h>
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+void	ft_putchar_fd(char c, int fd)
 {
-	char	*s;
-	char	*d;
-	
-	if (!dst || !src)
-		return (NULL);
-	d = dst;
-	s = (char *)src;
-	while (n--)
-		*d++ = *s++;
-	return (dst);
+	write(fd, &c, 1);
 }
