@@ -6,7 +6,7 @@
 /*   By: yushsato <yushsato@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 14:29:59 by yushsato          #+#    #+#             */
-/*   Updated: 2023/06/10 16:35:15 by yushsato         ###   ########.fr       */
+/*   Updated: 2023/06/10 18:55:51 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	char	*s;
 	char	*d;
 
-	if (!dst || !src)
+	if (!dst && !src)
 		return (NULL);
 	d = dst;
 	s = (char *)src;

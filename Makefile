@@ -36,9 +36,16 @@ SRCS = ft_isalpha.c \
 	   ft_putstr_fd.c \
 	   ft_putendl_fd.c \
 	   ft_putnbr_fd.c
+BONUS = ft_lstnew.c
 
-OBJS = $(SRCS:.c=.o)
+OBJS  = $(SRCS:.c=.o)
+BOBJS = $(BONUS:.c=.o)
+
 all: $(NAME)
+
+bonus: $(OBJS) $(BOBJS)
+	ar rc $(NAME) $(OBJS) $(BOBJS)
+	ranlib $(NAME)
 
 $(NAME): $(OBJS)
 	ar rc $(NAME) $(OBJS)
@@ -55,4 +62,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all bonus clean fclean re
