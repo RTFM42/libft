@@ -6,7 +6,7 @@
 /*   By: yushsato <yushsato@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/04 17:08:33 by yushsato          #+#    #+#             */
-/*   Updated: 2023/06/10 14:40:44 by yushsato         ###   ########.fr       */
+/*   Updated: 2023/06/10 15:08:08 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,17 +73,11 @@ char	**ft_split(const char *s, char c)
 {
 	char		**ret;
 
-	ret = split_allocate(s, c);
-	if (!s)
+	if (s == NULL)
 		return (NULL);
+	ret = split_allocate(s, c);
 	if (ret == NULL)
 		return (NULL);
 	ret = split_in(ret, s, c);
 	return (ret);
 }
-
-// void	main(void)
-// {
-// 	char	*s = "      split       this for   me  !       ";
-// 	char	**res = ft_split(s, ' ');
-// }
