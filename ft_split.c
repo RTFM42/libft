@@ -6,7 +6,7 @@
 /*   By: yushsato <yushsato@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/04 17:08:33 by yushsato          #+#    #+#             */
-/*   Updated: 2023/06/10 15:08:08 by yushsato         ###   ########.fr       */
+/*   Updated: 2023/06/11 14:54:28 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	**split_allocate(const char *s, char c)
 	while (*s != '\0')
 	{
 		i = 0;
-		while (*s == c)
+		while (*s == c && *s != '\0')
 			s++;
 		while (s[i] != c && s[i] != '\0')
 			i++;
@@ -35,8 +35,9 @@ char	**split_allocate(const char *s, char c)
 	ret = malloc(sizeof(char *) * j);
 	if (!ret)
 		return (NULL);
+	i = 0;
 	while (j--)
-		ret[j + 1] = NULL;
+		ret[i++] = NULL;
 	return (ret);
 }
 
@@ -48,7 +49,7 @@ char	**split_in(char **ret, const char *s, char c)
 	while (*s != '\0')
 	{
 		i[0] = 0;
-		while (*s == c)
+		while (*s == c && *s != '\0')
 			s++;
 		while (s[i[0]] != c && s[i[0]] != '\0')
 			i[0]++;
@@ -80,4 +81,9 @@ char	**ft_split(const char *s, char c)
 		return (NULL);
 	ret = split_in(ret, s, c);
 	return (ret);
+}
+
+int	main(void)
+{
+	ft_split("\0aa\0bb", '\0');
 }

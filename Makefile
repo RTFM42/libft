@@ -55,7 +55,7 @@ $(NAME): $(OBJS)
 	$(CC) $(CFLG) -c $< -o $@ -I$(INCL)
 
 clean:
-	rm -rf $(OBJS)
+	rm -rf $(OBJS) $(BOBJS)
 
 fclean: clean
 	rm -f $(NAME)
