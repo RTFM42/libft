@@ -36,6 +36,7 @@ SRCS = ft_isalpha.c \
 	   ft_putstr_fd.c \
 	   ft_putendl_fd.c \
 	   ft_putnbr_fd.c
+
 BONUS = ft_lstnew.c \
 		ft_lstadd_front.c \
 		ft_lstsize.c \
@@ -46,18 +47,20 @@ BONUS = ft_lstnew.c \
 		ft_lstiter.c \
 		ft_lstmap.c
 
+ifdef WITH_BONUS
+	SRCS += $(BONUS)
+endif
+
 OBJS  = $(SRCS:.c=.o)
 BOBJS = $(BONUS:.c=.o)
 
 all: $(NAME)
 
-bonus: $(OBJS) $(BOBJS)
-	ar rc $(NAME) $(OBJS) $(BOBJS)
-	ranlib $(NAME)
-
 $(NAME): $(OBJS)
-	ar rc $(NAME) $(OBJS)
-	ranlib $(NAME)
+	ar rcs $(NAME) $(OBJS)
+
+bonus:
+	@make WITH_BONUS=1
 
 %.o: %.c $(INCL)
 	$(CC) $(CFLG) -c $< -o $@ -I$(INCL)
