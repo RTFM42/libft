@@ -6,7 +6,7 @@
 /*   By: yushsato <yushsato@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/04 17:08:33 by yushsato          #+#    #+#             */
-/*   Updated: 2023/06/11 14:54:28 by yushsato         ###   ########.fr       */
+/*   Updated: 2023/06/11 15:15:51 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,9 +81,4 @@ char	**ft_split(const char *s, char c)
 		return (NULL);
 	ret = split_in(ret, s, c);
 	return (ret);
-}
-
-int	main(void)
-{
-	ft_split("\0aa\0bb", '\0');
 }
