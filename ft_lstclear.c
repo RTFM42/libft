@@ -6,7 +6,7 @@
 /*   By: yushsato <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/11 17:12:20 by yushsato          #+#    #+#             */
-/*   Updated: 2023/06/11 17:40:26 by yushsato         ###   ########.fr       */
+/*   Updated: 2023/06/11 17:45:59 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
 	t_list	*tmp;
+
 	if (!lst || !del)
 		return ;
 	while (*lst)
