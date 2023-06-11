@@ -6,7 +6,7 @@
 /*   By: yushsato <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/21 03:59:31 by yushsato          #+#    #+#             */
-/*   Updated: 2023/06/10 19:41:14 by yushsato         ###   ########.fr       */
+/*   Updated: 2023/06/11 15:15:32 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t slen)
 {
 	size_t	nlen;
 
-	if (!haystack || !needle)
-		return (NULL);
+	if (slen)
+		ft_strlen(haystack);
 	nlen = ft_strlen(needle);
 	if (*needle != '\0')
 	{
