@@ -6,7 +6,7 @@
 /*   By: yushsato <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/11 15:44:16 by yushsato          #+#    #+#             */
-/*   Updated: 2023/06/11 17:45:40 by yushsato         ###   ########.fr       */
+/*   Updated: 2023/06/13 19:56:34 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*tmp;
 
-	if (!new)
+	if (!new || !lst)
 		;
 	else if (!*lst)
 		*lst = new;
