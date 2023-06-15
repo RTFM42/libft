@@ -25,12 +25,14 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t slen)
 	{
 		if (slen < nlen)
 			return (0);
-		while (ft_strncmp(haystack, needle, nlen) != 0)
+		while (ft_strncmp(haystack, needle, nlen) != 0 && *haystack)
 		{
 			if (--slen < nlen)
 				return (0);
 			haystack++;
 		}
+		if (!*haystack)
+			return (0);
 	}
 	return ((char *)haystack);
 }
